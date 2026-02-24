@@ -25,7 +25,7 @@ public class BlueprintController {
   }
 
   @ResponseBody
-  @GetMapping("/api/blueprints/{author}/{name}")
+  @GetMapping("/api/v1/blueprints/{author}/{name}")
   public BlueprintUpdate get(@PathVariable String author, @PathVariable String name) {
     return new BlueprintUpdate(author, name, List.of(new Point(10,10), new Point(40,50)));
   }
